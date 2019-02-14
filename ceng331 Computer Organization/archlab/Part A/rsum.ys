@@ -1,0 +1,44 @@
+#Osman Emre Bilici	2171353
+#
+
+# Execution begins at address 0 
+	.pos 0 
+	irmovq stack, %rsp  	# Set up stack pointer  
+	call main		# Execute main program
+	halt			# Terminate program 
+
+# linkedlist of 3 elements
+.align 8
+ele1:
+	.quad 0x00a
+	.quad ele2
+ele2:
+	.quad 0x0b0
+	.quad ele3
+ele3:
+	.quad 0xc00
+	.quad 0
+
+
+main:	irmovq ele1,%rdi	
+	call rsum_list		
+	ret
+
+
+rsum_list:
+	xorq %rax,%rax		# result = 0
+	andq %rdi,%rdi		# 
+	je     return		# setcc
+	pushq %rbx		# Save callee-saved
+	mrmovq (%rdi),%rbx	# ls -> val
+	mrmovq 8(%rdi), %rdi   # ls -> next
+	call rsum_list
+	addq %rbx,%rax          # Add *start to sum
+	popq %rbx		# Restore callee-saved
+return:
+	ret
+/* $end rsum-ys */
+
+# The stack starts here and grows to lower addresses
+	.pos 0x200		
+stack:	 

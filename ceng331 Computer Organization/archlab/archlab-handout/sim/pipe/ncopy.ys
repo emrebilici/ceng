@@ -1,0 +1,133 @@
+#/* $begin ncopy-ys */
+##################################################################
+# ncopy.ys - Copy a src block of len words to dst.
+# Return the number of positive words (>0) contained in src.
+#
+# Include your name and ID here.
+# Osman Emre Bilici
+# 2171353
+# 
+# Like in the book (practice problem 4.3), I use iaddq instead 
+# of irmovq and addq. It prevents use of more registers. There is no
+# need irmovq $1, %r10 then addq %r10, %rdi for example. We can 
+# implement directly iaddq $1, %rdi  
+# According to loop unrolling
+# I tried to change instructions order and I tried to unroll.
+# For example, I will decide a limit. If len is smaller than this
+# it will goes to remaining elements. It is similar to optimization
+# slide (loop unrolling 2x1).
+# Another unrolling technique that I use is seperate accumulator. 
+# I will use 6 at the beginning.
+# I know there are possible way to do it fast but I couldnt. I encountered
+# some problems.
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = len
+ncopy:
+
+##################################################################
+# You can modify this portion
+	# Loop header
+	xorq %rax,%rax		# count = 0;
+	andq %rdx,%rdx		# len <= 0?  --------------i can delete maybe
+	jle Done
+	iaddq $-6, %rdx		#  decide the limit
+	jl Bef		# if len - 6 < 0, goto Remaining part
+
+Loop:	
+	mrmovq (%rdi), %r9	# read val from src...
+	mrmovq 8(%rdi), %r10 # read src[1] 
+	mrmovq 16(%rdi), %r11 # read src[2]
+	mrmovq 24(%rdi), %r12  # read src[3]
+	mrmovq 32(%rdi), %rcx	
+	mrmovq 40(%rdi), %rbx
+ 	andq %r9, %r9		# val <= 0? for 0
+	jle Npos1		# if so, goto Npos:
+	iaddq $1, %rax		# count++
+Npos1:	
+	rmmovq %r9, (%rsi)  #first to dest
+	rmmovq %r10, 8(%rsi)	 # secondd to dest
+	rmmovq %r11, 16(%rsi)	#third to dest
+	rmmovq %r12, 24(%rsi)	#fourth to dest
+	rmmovq %rcx, 32(%rsi)	#fifth to dest
+	rmmovq %rbx, 40(%rsi)	#sixth to dest
+
+	andq %r10, %r10		#val <= 0 for 1
+	jle Npos2			# if so, goto npos2:
+	iaddq $1, %rax		# count++
+Npos2:
+
+	andq %r11, %r11			# val <= 0 for 2
+	jle Npos3
+	iaddq $1, %rax		# count++
+Npos3:
+	andq %r12, %r12		# val <= 0 for 3
+	jle Npos4
+	iaddq $1, %rax		# count++
+Npos4:
+	andq %rcx, %rcx			# val <= 0 for 4
+	jle Npos5
+	iaddq $1, %rax		# count++
+Npos5:
+	andq %rbx, %rbx		# val <= 0 for 5
+	jle Rem
+	iaddq $1, %rax
+Rem:
+	iaddq $48, %rdi   # increment source for remaining parts
+	iaddq $48, %rsi   # incr dest
+	iaddq $-6, %rdx	  # checking len
+	jge Loop			  # if len - 6 >= 0 goto loop
+Bef:
+	iaddq $5, %rdx		#if there are remainings than get real len
+	jl Done				#if so there is no remaining
+Rem1:
+	mrmovq (%rdi), %r9	# src[ 1 = mod 6 ]
+	rmmovq %r9, (%rsi)	# dst[same]
+	andq %r9, %r9		#val <= 0
+	jle Rem2
+	iaddq $1, %rax
+Rem2:
+	iaddq $-1, %rdx
+	jl Done
+	mrmovq 8(%rdi), %r10	# src[ 2 = mod 6 ]
+	rmmovq %r10, 8(%rsi)	# dst[same]
+
+	andq %r10, %r10		#val <= 0
+	jle Rem3
+	iaddq $1, %rax
+Rem3:
+	iaddq $-1, %rdx
+	jl Done
+	mrmovq 16(%rdi), %r9	# src[ 2 = mod 6 ]
+	rmmovq %r9, 16(%rsi)	# dst[same]
+
+	andq %r9, %r9		#val <= 0
+	jle Rem4
+	iaddq $1, %rax
+Rem4:
+	iaddq $-1, %rdx
+	jl Done
+	mrmovq 24(%rdi), %r10	# src[ 2 = mod 6 ]
+	rmmovq %r10, 24(%rsi)	# dst[same]
+
+	andq %r10, %r10		#val <= 0
+	jle Rem5
+	iaddq $1, %rax
+Rem5:
+	iaddq $-1, %rdx
+	jl Done
+	mrmovq 32(%rdi), %r9	# src[ 5 = mod 6 ]
+	rmmovq %r9, 32(%rsi)	# dst[same]
+	andq %r9, %r9		#val <= 0
+	jle Done
+	iaddq $1, %rax
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+	ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end ncopy-ys */
