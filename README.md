@@ -1,4 +1,4 @@
-# cenghw
+# METU CENG HOMEWORKS
 This repository includes some homeworks from METU Computer Engineering.
 
 
