@@ -1,0 +1,77 @@
+ISim log file
+Running: D:\DERS\ceng232\hw\hw3_part_2\testbench_lab3_2_isim_beh.exe -gui -tclbatch isim.cmd -wdb D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2_isim_beh.wdb 
+ISim M.81d (signature 0xcb73ee62)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Time=                   0 | word=00000 selection=0 mode=0 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Time=                5000 | word=10010 selection=0 mode=1 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Time=               10000 | word=10010 selection=0 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=0
+Test 1: Successful
+Time=               15000 | word=01010 selection=0 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=0
+Time=               20000 | word=01010 selection=0 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=1
+Test 2: Successful
+Time=               25000 | word=11111 selection=1 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=1
+Time=               30000 | word=11111 selection=1 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  1, warning=0
+Test 3: Successful
+Time=               35000 | word=01101 selection=0 mode=0 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  1, warning=0
+Time=               40000 | word=01101 selection=0 mode=0 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  1, warning=1
+Test 4: Successful
+Time=               45000 | word=01101 selection=1 mode=0 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  1, warning=1
+Time=               50000 | word=01101 selection=1 mode=0 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=0
+Test 5: Successful
+Test 6: Successful
+Time=               65000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  0, warning=0
+Time=               70000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  2 nerd1=  0 nerd0=  0, warning=0
+Time=               80000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  3 nerd1=  0 nerd0=  0, warning=0
+Time=               90000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  4 nerd1=  0 nerd0=  0, warning=0
+Time=              100000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  5 nerd1=  0 nerd0=  0, warning=0
+Time=              110000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  6 nerd1=  0 nerd0=  0, warning=0
+Time=              120000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  7 nerd1=  0 nerd0=  0, warning=0
+Time=              130000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  8 nerd1=  0 nerd0=  0, warning=0
+Time=              140000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  9 nerd1=  0 nerd0=  0, warning=0
+Time=              150000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Time=              160000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  1 nerd1=  0 nerd0=  0, warning=0
+Time=              170000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  2 nerd1=  0 nerd0=  0, warning=0
+Time=              180000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  3 nerd1=  0 nerd0=  0, warning=0
+Time=              190000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  4 nerd1=  0 nerd0=  0, warning=0
+Time=              200000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  5 nerd1=  0 nerd0=  0, warning=0
+Time=              210000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  6 nerd1=  0 nerd0=  0, warning=0
+Time=              220000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  7 nerd1=  0 nerd0=  0, warning=0
+Time=              230000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  8 nerd1=  0 nerd0=  0, warning=0
+Time=              240000 | word=00101 selection=0 mode=1 | hips1=  1 hips0=  9 nerd1=  0 nerd0=  0, warning=0
+Time=              250000 | word=00101 selection=0 mode=1 | hips1=  2 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Test 7: Successful
+Time=              260000 | word=00101 selection=0 mode=1 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Test 8: Successful
+Time=              265000 | word=00110 selection=1 mode=1 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  0, warning=0
+Time=              270000 | word=00110 selection=1 mode=1 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  1, warning=0
+Test 9: Successful
+Time=              275000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  0 nerd1=  0 nerd0=  1, warning=0
+Time=              280000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  1 nerd1=  0 nerd0=  1, warning=0
+Time=              290000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  2 nerd1=  0 nerd0=  1, warning=0
+Time=              300000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  3 nerd1=  0 nerd0=  1, warning=0
+Time=              310000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  4 nerd1=  0 nerd0=  1, warning=0
+Time=              320000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  5 nerd1=  0 nerd0=  1, warning=0
+Time=              330000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  6 nerd1=  0 nerd0=  1, warning=0
+Time=              340000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  7 nerd1=  0 nerd0=  1, warning=0
+Time=              350000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  8 nerd1=  0 nerd0=  1, warning=0
+Time=              360000 | word=00110 selection=0 mode=1 | hips1=  0 hips0=  9 nerd1=  0 nerd0=  1, warning=0
+Time=              370000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  0 nerd1=  0 nerd0=  1, warning=0
+Time=              380000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  1 nerd1=  0 nerd0=  1, warning=0
+Time=              390000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  2 nerd1=  0 nerd0=  1, warning=0
+Time=              400000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  3 nerd1=  0 nerd0=  1, warning=0
+Time=              410000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  4 nerd1=  0 nerd0=  1, warning=0
+Time=              420000 | word=00110 selection=0 mode=1 | hips1=  1 hips0=  5 nerd1=  0 nerd0=  1, warning=0
+Time=              425000 | word=00110 selection=0 mode=0 | hips1=  1 hips0=  5 nerd1=  0 nerd0=  1, warning=0
+Time=              430000 | word=00110 selection=0 mode=0 | hips1=  1 hips0=  4 nerd1=  0 nerd0=  1, warning=0
+Time=              440000 | word=00110 selection=0 mode=0 | hips1=  1 hips0=  3 nerd1=  0 nerd0=  1, warning=0
+Test 10: Successful
+Stopped at time : 445 ns : File "D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2.v" Line 193

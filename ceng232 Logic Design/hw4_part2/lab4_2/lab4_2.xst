@@ -1,0 +1,5 @@
+set -tmpdir "D:/DERS/ceng232/hw/hw4_part2/lab4_2/xst/projnav.tmp"
+set -xsthdpdir "D:/DERS/ceng232/hw/hw4_part2/lab4_2/xst"
+elaborate
+-ifn lab4_2.prj
+-ifmt mixed

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/DERS/ceng232/hw3_part_1_v2/hw3_part_1/af.xst" -ofn "D:/DERS/ceng232/hw3_part_1_v2/hw3_part_1/af.syr" 

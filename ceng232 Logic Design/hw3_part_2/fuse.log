@@ -1,0 +1,21 @@
+Running: D:\ProgramData\Xilinx\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2_isim_beh.exe -prj D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2_beh.prj work.testbench_lab3_2 work.glbl 
+ISim M.81d (signature 0xcb73ee62)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"D:/DERS/ceng232/hw/hw3_part_2/lab3_2.v\" into library work
+Analyzing Verilog file \"D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2.v\" into library work
+Analyzing Verilog file \"D:/ProgramData/Xilinx/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 182772 KB
+Fuse CPU Usage: 124 ms
+Compiling module lab3_2
+Compiling module testbench_lab3_2
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable D:/DERS/ceng232/hw/hw3_part_2/testbench_lab3_2_isim_beh.exe
+Fuse Memory Usage: 189268 KB
+Fuse CPU Usage: 187 ms

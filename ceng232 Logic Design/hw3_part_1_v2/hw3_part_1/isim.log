@@ -1,0 +1,28 @@
+ISim log file
+Running: D:\DERS\ceng232\hw3_part_1_v2\hw3_part_1\testbench_af_isim_beh.exe -gui -tclbatch isim.cmd -wdb D:/DERS/ceng232/hw3_part_1_v2/hw3_part_1/testbench_af_isim_beh.wdb 
+ISim M.81d (signature 0xcb73ee62)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Time=                   0 | a=0 f=0 | q=1
+Time=                5000 | a=1 f=1 | q=1
+Time=               10000 | a=1 f=1 | q=0
+Successful
+Time=               15000 | a=0 f=1 | q=0
+Successful
+Time=               25000 | a=1 f=0 | q=0
+Time=               30000 | a=1 f=0 | q=1
+Successful
+Time=               75000 | a=1 f=1 | q=1
+Time=               80000 | a=1 f=1 | q=0
+Time=              115000 | a=0 f=0 | q=0
+Time=              120000 | a=0 f=0 | q=1
+Successful
+Stopped at time : 125 ns : File "D:/DERS/ceng232/hw3_part_1_v2/hw3_part_1/testbench_af.v" Line 61
