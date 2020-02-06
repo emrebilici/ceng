@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+    <div>
+        <h3>You are in {{current_game}}</h3>
+        <form action="/game/refresh/" method="GET">
+            <input type="submit" name="submit" value="Refresh">
+        </form>
+        <form action="/game/join/" method="GET">
+            <input type="submit" name="submit" value="Join">
+        </form>
+        <form action="/game/ready/" method="GET">
+            <input type="submit" name="submit" value="Ready">
+        </form>
+    </div>
+</body>
+</html>

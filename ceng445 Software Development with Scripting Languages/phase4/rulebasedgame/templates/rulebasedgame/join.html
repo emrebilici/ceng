@@ -1,0 +1,8 @@
+<h1>You are in {{ name }}</h1>
+<h1>Are you ready, {{ playername }} ?</h1>
+
+<form action="{% url 'rulebasedgame:ready' name playerid %}" method="post">
+{% csrf_token %}
+<input type="submit" value="Ready" name="READY">
+</form>
+

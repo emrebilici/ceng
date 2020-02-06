@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rule Based Game</title>
+</head>
+<body>
+    <h2>Welcome, please choose a game</h2>
+    <div>
+        <form action="/game/choose/" method="GET">
+            {% csrf_token %}
+            <select name="game">
+                {% for game in games %}
+                <option value="{{game.name}}">{{game.name}}</option>
+                {% endfor %}
+            </select> <br>
+            <input type="text" name="id" value="Enter id"> <br>
+            <input type="submit" name="submit" value="Choose">
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{"name": "Deneme4",
+ "dice" :6,
+ "cycles": 10,
+ "credit" : 100,
+  "termination": {"round": 5}, 
+  "cells" : [ 
+{"cellno" : 0, "description" : "Start"},
+{"cellno" : 1, "description": ""},
+{"cellno" : 2, "description" : "Add", "action": {"add": 10} },
+{"cellno" : 3, "description" : "Drop", "action": {"drop": 50} },
+{"cellno" : 4, "description" : "Jump 2 forward", "action": {"jump": -2} },
+{"cellno" : 5, "description" : "Jump cell 6", "action": {"jump": "=7"} },
+{"cellno" : 6, "description" : "skip", "action": {"skip": 2}},
+{"cellno" : 7, "description" : ""},
+{"cellno" : 8, "description" : "", "action": {"jump": "=2"} },
+{"cellno" : 9, "description" : "", "action": {"add": 40} },
+{"cellno" : 10, "description" : "" },
+{"cellno" : 11, "description" : "Pay", "action": {"pay": "(1,30)" } },
+{"cellno" : 12, "description" : "", "action":  {"jump": 4} },
+{"cellno" : 13, "description" : "", "action":  {"jump": 2} }
+],
+ "cards": []
+}

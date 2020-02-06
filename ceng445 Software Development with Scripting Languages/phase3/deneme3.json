@@ -1,0 +1,20 @@
+{"name": "Firstbroke game. Drawcard ve artifact var.",
+ "dice" :6,
+ "cycles": "True",
+ "credit" : 100,
+  "termination": "firstbroke",
+  "cells" : [ 
+{"cellno" : 0, "description" : "Start"},
+{"cellno" : 1, "description": ""},
+{"cellno" : 2, "description" : "Add", "action": {"add": 10} },
+{"cellno" : 3, "description" : "Drop", "action": {"drop": 50} },
+{"cellno" : 4, "description" : "Jump 2 forward", "action": {"jump": 4} },
+{"cellno" : 5, "description" : "draw", "action" : "drawcard" },
+{"cellno" : 6, "description" : "Pay", "action": {"pay": "(1,30)" }},
+{"cellno" : 7, "description" : "skip", "action": {"skip": 2}},
+{"cellno" : 8, "description" : "artifact", "artifact": {"name" : "ide", "owned": "True", "price": 0, "action": {"add": 25 }}},
+{"cellno" : 9, "description" : ""}
+],
+"cards" : [{"action": {"jump": 2}} ,{"action": {"skip": 2}}, {"action": {"pay": "(1,30)" }}]
+}
+

@@ -1,0 +1,14 @@
+{% if otherPlayersWaited %}
+	<h1>You are not ready, {{playername}}! You should wait for other players!</h1>
+	<form action="{% url 'rulebasedgame:ready' name playerid %}" method="post">
+		{% csrf_token %}
+		<input type="submit" value="Ready" name="READY">
+	</form>
+{% else %}
+<h1>You are ready! {{playername}}</h1>
+
+<form action="{% url 'rulebasedgame:checkready' name playerid %}" method="post">
+{% csrf_token %}
+<input type="submit" value="refresh" name="refresh">
+</form>
+{% endif %}

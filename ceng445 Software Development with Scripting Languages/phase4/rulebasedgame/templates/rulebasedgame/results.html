@@ -1,0 +1,17 @@
+<h1>{{ question.question_text }}</h1>
+
+<h2> {{game.name}} <h2>
+
+<form action="{% url 'ilkapp:salak' game.name %}" method="post">
+{% csrf_token %}
+<label for="emre">oyuncu</label><br>
+<input type="text" value="" name="xd">
+<input type="submit" value="deneme">
+</form>
+
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>

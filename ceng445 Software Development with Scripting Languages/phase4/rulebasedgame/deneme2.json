@@ -1,0 +1,18 @@
+{"name": "Deneme2",
+ "dice" :6,
+ "cycles": "True",
+ "credit" : 100,
+  "termination": "firstbroke", 
+  "cells" : [ 
+{"cellno" : 0, "description" : "Start"},
+{"cellno" : 1, "description": ""},
+{"cellno" : 2, "description" : "Add", "action": {"add": 10} },
+{"cellno" : 3, "description" : "Drop", "action": {"drop": 50} },
+{"cellno" : 4, "description" : "Jump 2 forward", "action": {"jump": -1} },
+{"cellno" : 5, "description" : "Jump cell 6", "action": {"jump": "=7"} },
+{"cellno" : 6, "description" : "skip", "action": {"skip": 1}},
+{"cellno" : 7, "description" : ""},
+{"cellno" : 8, "description" : "Pay", "action": {"pay": "(1,30)" } }
+],
+ "cards": []
+}

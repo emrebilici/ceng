@@ -1,0 +1,22 @@
+{"name": "Deneme3",
+ "dice" :6,
+ "cycles": "True",
+ "credit" : 100,
+  "termination": {"firstcollect" : 2},
+  "cells" : [ 
+{"cellno" : 0, "description" : "Start"},
+{"cellno" : 1, "description": ""},
+{"cellno" : 2, "description" : "artifact", "artifact": {"name" : "ide", "owned": "False", "price": 20, "action": {"jump": 4}}},
+{"cellno" : 3, "description" : "Add", "action": {"drop": 10} },
+{"cellno" : 4, "description" : "Drop", "action": {"drop": 50} },
+{"cellno" : 5, "description" : "Jump 2 forward", "action": {"jump": 2} },
+{"cellno" : 6, "description" : "draw", "action" : "drawcard" },
+{"cellno" : 7, "description" : "artifact", "artifact": {"name" : "ide", "owned": "True", "price": 50}},
+{"cellno" : 8, "description" : "Pay", "action": {"pay": "(1,30)" }},
+{"cellno" : 9, "description" : "skip", "action": {"skip": 2}},
+{"cellno" : 10, "description" : "artifact", "artifact": {"name" : "ide", "owned": "False", "price": 0, "action": {"drop": 70}}},
+{"cellno" : 11, "description" : ""}
+],
+"cards" : [{"action": {"jump": 2}} ,{"action": {"skip": 2}}, {"action": {"pay": "(1,30)" }}]
+}
+

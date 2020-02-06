@@ -1,0 +1,14 @@
+<h1>{{ name }}</h1>
+
+{% if cantJoinDueId %}
+<h3>
+    You can't join to {{name}} since someone has already joined with the id!! Try with different id :)
+</h3>
+{% endif %}
+
+<form action="{% url 'rulebasedgame:join' name %}" method="post">
+{% csrf_token %}
+<input type="text" value="" name="playerid" placeholder="Player ID" required>
+<input type="text" value="" name="playername" placeholder="Player Name" required>
+<input type="submit" value="join">
+</form>

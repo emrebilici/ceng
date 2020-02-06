@@ -1,0 +1,15 @@
+{"name": "Round game:3",
+ "dice" :3,
+ "cycles": 5,
+ "credit" : 100,
+  "termination": {"round": 3}, 
+  "cells" : [ 
+{"cellno" : 0, "description" : "Start"},
+{"cellno" : 1, "description": ""},
+{"cellno" : 2, "description" : "Bug", "action": {"add": 10} },
+{"cellno" : 3, "description" : "New version", "action": {"jump": 2} },
+{"cellno" : 4, "description" : "Runtime error", "action": {"jump": "=6"} },
+{"cellno" : 5, "description" : ""},
+{"cellno" : 6, "description" : ""}],
+ "cards": []
+}

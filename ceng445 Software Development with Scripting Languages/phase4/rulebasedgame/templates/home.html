@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rule Based Game</title>
+	<script type="text/javascript" src="../static/jquery.js"></script>
+	<script type="text/javascript" src="../static/jqgame.js"></script>
+</head>
+<body>
+	<h1 align="center">Rule Based Game</h1>
+	<div align="center" id="gamename"></div>
+	<div align="center" id="playername"></div>
+	<div id="chooseBlock" align="center">
+		Select a Game<br>
+		<form id="choosegameform" onSubmit="return false;">
+			{% csrf_token %}
+			<select name="selectGame"> 
+			</select><br>
+			<button name="choose">choose</button><br>
+		</form><br>
+	</div>
+	<div id="enterNameBlock" align="center">
+		{% csrf_token %}
+		Enter name:
+		<input type="text" name="name"><br>
+		Enter id:  
+		<input type="text" name="id"><br>
+		<button name="joinGame">Join</button>
+	</div>
+	<div id="readyBlock" align="center">
+		Are you ready ?<br>
+		<button name="readyOk">Ready</button>
+	</div>
+	<div id="readyMsg" align="center">
+	</div>
+	<div id="gameBlock" align="center">
+		<h2>Cells</h2>
+		<div align="center" id="cells">
+			Cells 
+		</div>
+
+		<div align="center" id= "gameOver"></div>
+		<div align="center" id= "otherDetails"></div>
+		<h2>Details of the Game</h2>
+		<div align="center" id= "details">
+			
+		</div>
+
+
+
+{% if gameOver %}
+
+<h1> Game is over! </h1>
+<h2> Winner is {{winner}}</h2>
+{% if loser %}
+<h2> Loser is {{loser}}</h2>
+<h2> Loser's credit{{loser.credit}}</h2>
+{%endif%}
+<h2>Details of the game: </h2>
+<h2>You are {{playername}}</h2>
+<label>Players pos: {{playersPos}}</label>
+<label>credits: {{credits}}</label>
+<label>negeldi: {{negeldi}}</label>
+<label>pickedArtifact: {{pickedArtifact}}</label>
+<label>playerTurnType: {{playerTurnType}}</label>
+<label>playerroundno: {{playerroundno}}</label>
+
+
+
+<h3>If you want to play again click:</h3>
+<a href="/rulebasedgame">Again</a> 
+
+{% else%}
+
+	{% if hasToWait %}
+		<h2> You should wait for {{hasToWait}} turn!</h2>
+	{% endif %}
+	
+
+
+
+<style> 
+    table, th, td { 
+        border: 1px solid black; 
+    } 
+</style> 
+
+
+{% if gameisoverforplayer %}
+<h2> Game is over for you!!! {{playerid}}</h2>
+
+<h3>If you want to play again click:</h3>
+<a href="/rulebasedgame">Again</a> 
+
+{% else %}
+
+
+<form >
+{% csrf_token %}
+{% if playerType == "choice" %}
+<h2>You should pick or not</h2>
+{% endif %}
+
+{% if playerType == "drawcard" %}
+<h2>You will draw a card</h2>
+{% endif %}
+<input type="text" name="pick"  value="" placeholder="True to pick, False to not pick">
+
+<input type="submit" value="turn" name="turn">
+</form>
+
+
+{% endif %}
+
+{% endif %}
+
+
+
+
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<h1> Choose a game </h1>
+
+{% if cantJoinDueReady %}
+<h3>
+    You can't join this game since someone has already started!! Try with another game :)
+</h3>
+{% endif %}
+{% for game in games %}
+<form action="{% url 'rulebasedgame:detail' game.name %}" method="post">
+{% csrf_token %}
+            <input type="submit" name="submit" value="{{game.name}}">
+</form>
+{% endfor %}
