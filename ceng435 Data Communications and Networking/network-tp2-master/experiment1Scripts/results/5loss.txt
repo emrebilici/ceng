@@ -1,0 +1,6 @@
+Total TransferTime is :  101.38071608543396
+Total TransferTime is :  101.9100329875946
+Total TransferTime is :  100.5304343700409
+Total TransferTime is :  101.78037762641907
+Total TransferTime is :  101.51954817771912
+Total TransferTime is :  100.5234215259552

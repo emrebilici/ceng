@@ -1,0 +1,25 @@
+loss 5
+----------------
+Mean is :  101.2740884621938
+Std is :  0.6080947849012354
+Confidence inteval is : 0.4865771664968029
+
+loss 15
+----------------
+Mean is :  113.57916454474132
+Std is :  0.6183143211055261
+Confidence inteval is : 0.494754498538884
+
+loss 38
+----------------
+Mean is :  642.110914349556
+Std is :  11.661891847272345
+Confidence inteval is : 9.331456924037857
+
+loss multihome
+
+Mean is :  64.4113748550414
+Std is :  2.1532608772431847
+Confidence inteval is : 1.7229675412322065
+
+"""
