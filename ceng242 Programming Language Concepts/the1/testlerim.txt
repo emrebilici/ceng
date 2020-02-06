@@ -1,0 +1,17 @@
+test lerim
+writeExpression (
+(ASTNode "plus" 				
+	(ASTNode  "num" 			1
+		(ASTNode "333" 			1.1
+			EmptyAST 			1.1.1
+			EmptyAST ) 			1.1.2				c
+		EmptyAST				1.2
+	) 
+	(ASTNode "num" 				2
+		(ASTNode "667" 			2.1
+			EmptyAST 			2.1.1
+			EmptyAST ) 			2.1.2				
+		EmptyAST 				2.2
+	)
+)
+, [])
