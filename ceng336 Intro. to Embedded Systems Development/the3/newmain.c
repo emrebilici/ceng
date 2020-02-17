@@ -16,7 +16,7 @@ In the adc interrupt, we decide which candidate is selected.
 We have 3 arrays for 7 segment display values, id numbers and vote numbers.
 */
 
-/*
+
 
 #include <xc.h>
 //#include <p18cxxx.h>
@@ -692,4 +692,3 @@ void __interrupt() ISR(void){
     }
     return;
 }
-*/
