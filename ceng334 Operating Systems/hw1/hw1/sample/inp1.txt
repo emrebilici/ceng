@@ -1,0 +1,3 @@
+0 5 2
+./sample/Bidder 1 2000
+./sample/Bidder 1 2000 
